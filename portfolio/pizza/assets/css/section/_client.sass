@@ -1,0 +1,150 @@
+.client-section
+  position: relative
+
+  .client-belt
+    width: 100%
+    position: relative
+
+    .client-unit
+      max-width: 700px
+      margin: 0px auto
+      z-index: 1
+      // +position(absolute, 0px null null 50%)
+      position: relative
+      //+display(flex)
+      display: none
+      transform:  scale(0.5)
+      +transition
+      opacity: 1
+
+
+
+      &.active-client
+        transform:  scale(1)
+        opacity: 1
+        +display(flex)
+
+
+
+
+
+      .client-face
+        min-width: 300px
+        text-align: center
+
+        img
+          max-width: 100px
+          border-radius: 50%
+
+        .client-name
+          display: block
+          text-transform: uppercase
+          font-weight: 400
+          letter-spacing: 2px
+
+        .client-title
+          font-size: 16px
+          font-style: normal
+
+      .client-content
+        font-size: 16px
+        line-height: 36px
+        font-weight: 300
+
+
+
+  .client-logos
+    +display(flex)
+    position: relative
+    align-items: center
+    justify-content: space-around
+    align-items: flex-end
+    max-width: 700px
+    margin: 60px auto 80px
+
+
+    .client-logo
+      opacity: 0.5
+      margin: 0 40px
+      border-bottom: 4px solid transparent
+
+
+      &.active-client
+        border-bottom: 4px solid $accent
+        opacity: 1
+
+
+
+
+
+  .client-controls
+    position: absolute
+    // pointer-events: none
+    top: 50%
+    z-index: 1
+    +size(100%)
+    height: 0%
+    > div
+      +size(40px)
+      svg
+        +size(40px)
+
+    .client-control-next
+      +position(absolute, 100% 40px null null)
+      margin-top: -20px
+
+    .client-control-prev
+      +position(absolute, 100% null null 40px)
+      margin-top: -20px
+
+  //fprdfsa
+  .mobile-client-nav
+    text-align: center
+    margin-bottom: 30px
+    display: none
+
+    span
+      display: inline-block
+      +size(20px)
+      border: 2px solid $bgcolor
+      border-radius: 50%
+      margin: 0 10px
+      cursor: pointer
+
+      &.active-client
+        border-color: $accent
+
+  @media screen and (max-width: 870px)
+
+    .client-controls
+        display: none
+
+    .client-belt
+      position:relative
+
+      .client-unit.active-client
+        position: relative
+        display: block
+        // width: 100%
+        margin-left: 0px
+        left: 0
+        // max-width: 400px
+        // padding: 0 20px
+        text-align: center
+
+
+        .client-face
+          margin-bottom: 20px
+
+        .client-content
+          max-width: 300px
+          margin: 0 auto
+          padding: 0 30px
+
+
+    .client-logos
+      margin: 0 auto 80px
+      +flex-wrap(wrap)
+
+      .client-logo
+        margin: 20px  10px 0px

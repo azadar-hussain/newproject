@@ -1,0 +1,206 @@
+.alt-section
+  background: $bgcolor
+  padding-bottom: 100px
+  overflow-x: hidden
+
+
+
+  .work-belt
+    // background: pink
+    width: 200%
+    +clearfix
+    position: relative
+    +transition(all 800ms)
+    left: 0%
+
+
+
+  .thumb-wrapper, .work-wrapper
+    width: 50%
+    float: left
+
+
+  .thumb-container
+    max-width: 920px
+    margin: 0 auto
+    // background: red
+    +clearfix
+
+
+    .thumb-unit
+      display: block
+      width: 25%
+      float: left
+      background: pink
+      position: relative
+      padding-top: 16%
+      overflow: hidden
+      text-align: center
+      font-size: 24px
+      font-weight: thinner
+      text-transform: uppercase
+      line-height: 1.2
+      +transition
+      background:
+        image: url(/assets/img/work/proj-1/img1.jpg)
+        position: center center
+        size: 160%
+        repeat: no-repeat
+
+
+      @media screen and (max-width: 845px)
+
+        // padding-top: 40%
+        font-size: 18px
+        letter-spacing: 2px
+        padding-top: 25%
+        background:
+          size: 190%
+      @media screen and (max-width: 750px)
+        width: 50%
+        padding-top: 40%
+        font-size: 20px
+        letter-spacing: 2px
+
+
+
+
+
+      &.thumb-unit2
+        background:
+          image: url(/assets/img/work/proj-2/img1.jpg)
+          position: center 0px
+
+
+
+      &.thumb-unit3
+        background:
+          image: url(/assets/img/work/proj-3/img1.jpg)
+          position: center 0px
+      &.thumb-unit4
+        background:
+          image: url(/assets/img/work/proj-4/img1.jpg)
+          position: center 0px
+      &.thumb-unit5
+        background:
+          image: url(/assets/img/work/proj-5/img1.jpg)
+          position: center 0px
+      &.thumb-unit6
+        background:
+          image: url(/assets/img/work/proj-6/img1.jpg)
+          position: center 0px
+      &.thumb-unit7
+        background:
+          image: url(/assets/img/work/proj-7/img1.jpg)
+          position: center 0px
+      &.thumb-unit8
+        background:
+          image: url(/assets/img/work/proj-8/img1.jpg)
+          position: center 0px
+
+      &:hover
+        cursor: pointer
+
+      .thumb-overlay
+        pointer-events: none
+        +position(absolute,0% 0px 0px 0px)
+        transform: rotateY(180deg) skewX(80deg) scale(0.5)
+        opacity: 0
+        z-index: 1
+        height: 100%
+        background: fade-out($accent,0.1)
+        +transition(0.5s)
+        display: flex
+        align-items: center
+        flex-direction:  column
+        justify-content: center
+        animation-name: flib
+
+
+
+
+        strong
+           display: block
+           padding: 20px 10px 10px
+           font-weight: lighter
+           color: white
+
+
+
+           @media screen and (max-width: 750px)
+             padding-bottom: 40px
+
+           @media screen and (max-width: 650px)
+             padding-bottom: 10px
+
+
+
+        .zoom-icon
+           margin: 0
+           padding: 0
+           padding-top: 10px
+           color: white
+           svg
+            +size(50px)
+           path
+             fill: white
+           @media screen and (max-width: 750px)
+             svg
+               +size(35px)
+
+
+      &:hover .thumb-overlay
+
+         +position(absolute,0px 0px 0px 0px)
+         transform: rotateY(0deg) skewX(0deg) scale(1)
+         opacity: 1
+
+
+  .work-container
+    max-width: 600px
+    margin: 0px auto
+    position: relative
+    display: none
+
+
+    .icon-back
+      +size(40px)
+      +position(absolute,10px 0px 0px -80px)
+      cursor: pointer
+      opacity: 0.7
+      +transition(all 1000)
+      svg
+        +size(40px)
+      path
+        fill: rgba(0,0,0,0.6)
+
+      &:hover
+       opacity: 1
+
+    .icon-back
+      @media screen and (max-width: 800px)
+        +position(absolute,-12px 0px 0px 0px)
+
+
+
+
+
+    img
+      width: 100%
+      margin-bottom: 20px
+
+
+
+
+    h4
+     color: $accent
+     margin: 0px 0px 5px
+     @media screen and (max-width: 800px)
+       margin: -12px 0px  10px 80px
+          // #heading
+          //   color: $accent
+          //   font-size: 50px
+          //   font-weight: lighter
+          //   text-transform: uppercase
+          //   letter-spacing: 2px
+          //   margin:0px

@@ -1,0 +1,85 @@
+body
+  font-size: 100%
+
+
+header
+  background: #ccc
+  height: 450px
+  background: url(../img/hero-bg3.jpg)
+    repeat: no-repeat
+    size: cover
+    position:  center
+  background-attachment: fixed
+  display: block
+  width: 100%
+
+  .logo
+    width: 50px
+    height: 50px
+    float: left
+    margin: 10px 0 0 30px
+    path
+      fill: rgba(0,0,0,0.4)
+    svg
+      +size(50px)
+    @media screen and (max-width: 700px)
+      float: none
+      display: block
+      margin: 0 auto
+      padding-top: 10px
+
+
+
+
+
+  nav
+    float: right
+    margin: 30px 30px 0 0
+    @media screen and (max-width: 700px)
+      float: none
+      display: block
+      margin: 0 auto
+      text-align: center
+      margin-top: 15px
+
+    a
+      display: inline-block
+      margin-left: 20px
+      color: rgba(0,0,0,0.7)
+      @extend %small_bold
+
+      &:hover
+        color: rgba(0,0,0,1)
+
+  h1
+    color: white
+    text-align: center
+    font:
+      size: 72px
+      weight: 900
+      family: $Pt
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    margin-bottom: 10px
+    clear: both
+    padding-top: 100px
+    @media screen and (max-width: 700px)
+      font-size: 50px
+      padding-top: 0px
+      width: 100%
+      margin-bottom: 0
+
+    span
+      display: inline-block
+      border: 10px solid white
+      padding: 0.2em 0.5em
+      @media screen and (max-width: 700px)
+        padding: 0px
+
+  .kicker
+    color: white
+    text-align: center
+    @extend %small_bold
+    padding: 0.2em 0.5em
+    letter-spacing: 0.5em
+    line-height: 1

@@ -1,0 +1,43 @@
+footer
+  background: #ccc
+  background: url(../img/hero-bg3.jpg)
+    repeat: no-repeat
+    size: cover
+    position: center
+  margin: 0px
+
+  .lockup
+    padding: 60px 30px 40px
+    +clearfix
+    margin: 0px
+
+
+
+    .logo
+      width: 50px
+      height: 50px
+      float: left
+      margin-right: 30px
+      margin-top: -5px
+      path
+        fill: rgba(162,177,148,0.8)
+      svg
+        width: 50px
+        height: 50px
+
+    .content-wrap
+      float: left
+      .copyright
+        text-transform: uppercase
+        color: rgba(0,0,0,0.3)
+
+
+      nav
+        a
+          @extend %small_bold
+          margin-right: 30px
+          display: inline-block
+          color: rgba(0,0,0,0.4)
+
+          &:hover
+             color: rgba(0,0,0,7)

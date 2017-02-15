@@ -1,0 +1,128 @@
+h3
+  @extend %small_bold
+
+  color: $accent-light
+  text-align: center
+  padding: 100px 0 30px 0
+
+.face-lockup
+  max-width: 780px
+  margin: 0 auto
+  +display(flex)
+  +align-items(center)
+  +justify-content(space-around)
+
+  .face-img
+
+    background-size: cover
+    background-position: center
+    +size(150px)
+    border-radius: 50%
+    order: 3
+
+  [class^="icon-"]
+    +size(100px)
+    background: $bgcolor
+    text-align: cente
+    line-height: 140px
+    text-align: center
+    border-radius: 100%
+
+    path
+      fill: $accent
+    svg
+      +size(50px)
+
+
+    &.icon-pencil
+      order: 1
+    &.icon-mouse
+      order: 2
+    &.icon-browser
+      order: 4
+    &.icon-video
+       order: 5
+
+@media screen and (max-width: 650px)
+  .face-lockup
+    display: block
+    text-align: center
+    padding: 0 15px
+
+    .face-img
+      display: block
+      margin: 0 auto
+      margin-bottom: 30px
+
+    [class^="icon-"]
+      display: inline-block
+      margin: 0px
+      margin: 10px
+
+
+
+
+.blurb
+  max-width: 620px
+  margin: 0 auto
+  padding: 50px 15px 0
+  text-align: center
+  font-size: 24px
+  font-weight: 300
+  opacity: 0
+
+
+.skills-lockup
+  max-width: 700px
+  margin: 0 auto
+  margin-top: 100px
+  padding-bottom: 100px
+  +clearfix
+
+  .skill-unit
+    width: 330px
+    float: left
+    height: 40px
+    padding: 0 5px
+
+
+    .skill-label
+      margin-bottom: 5px
+    .skill-icon
+      background: $bgcolor
+      height: 4px
+      border-radius: 2px
+      overflow: hidden
+
+
+      span
+        background: $accent
+        height: 4px
+        width: 80%
+        display: block
+        margin: 0
+        padding: 0
+        border-radius: 2px
+
+      span.skill1
+           width: 0%
+      span.skill2
+         width: 0%
+
+      span.skill3
+         width: 0%
+
+      span.skill4
+         width: 0%
+
+      span.skill5
+         width: 0%
+
+      span.skill6
+         width: 0%
+
+      span.skill7
+         width: 0%
+
+      span.skill8
+         width: 0%
